@@ -1,3 +1,6 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /*
  * Copyright ©2018. Created by P. Bauer (p.bauer@htl-leonding.ac.at),
  * Department of Informatics and Media Technique, HTBLA Leonding,
@@ -21,3 +24,11 @@
  * PROVIDED HEREUNDER IS PROVIDED "AS IS". HTBLA LEONDING HAS NO OBLIGATION
  * TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
  */
+public class HttpUrlChecker {
+    private static Pattern pattern = Pattern.compile("http://[a-zA-Z0-9]*.[a-z]*");
+
+    public static Matcher getMatcher(String s) {
+        return pattern.matcher(s);
+    }
+}
+
